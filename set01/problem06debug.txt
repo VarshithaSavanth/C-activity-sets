@@ -1,0 +1,39 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146f: file problem06.c, line 12.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set01/a.exe
+[New Thread 12296.0x5084]
+[New Thread 12296.0x37c0]
+
+Breakpoint 1, main () at problem06.c:12
+12        input(&a, &b, &c);
+(gdb) n
+Enter the value of a : 12
+Enter the value of b : 19
+Enter the value of c : 11
+13        compare(a, b, c, &largest);
+(gdb) n
+14        output(a, b, c, largest);
+(gdb) n
+The largest of 12, 19 and 11 is 19
+15        return 0;
+(gdb) n
+16      }
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 12296] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
