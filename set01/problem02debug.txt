@@ -1,3 +1,55 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set01> gcc problem01.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem01.c, line 6.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set01/a.exe
+[New Thread 19896.0x220c]
+[New Thread 19896.0x4dc4]
+
+Breakpoint 1, main () at problem01.c:6
+6         printf("Varshitha Savanth\n");
+(gdb) n
+Varshitha Savanth
+7         return 0;
+(gdb) n
+8       }
+(gdb) n
+0x00401288 in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 19896] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\varsh\PSC\C-activity-sets\set01> git add .
+PS C:\Users\varsh\PSC\C-activity-sets\set01> git commit -m "problem01debug"
+[main f7c648c] problem01debug
+ 1 file changed, 8 insertions(+), 24 deletions(-)
+PS C:\Users\varsh\PSC\C-activity-sets\set01> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 470 bytes | 470.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/VarshithaSavanth/C-activity-sets
+   892616c..f7c648c  main -> main
+PS C:\Users\varsh\PSC\C-activity-sets\set01> git push
+Everything up-to-date
+PS C:\Users\varsh\PSC\C-activity-sets\set01> gcc problem02.c -O0 -g
 PS C:\Users\varsh\PSC\C-activity-sets\set01> gdb a.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
@@ -13,34 +65,32 @@ Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set01\a.exe...done.
 Breakpoint 1 at 0x40146e: file problem02.c, line 7.
 (gdb) r
 Starting program: C:\Users\varsh\PSC\C-activity-sets\set01/a.exe 
-[New Thread 20424.0x31a4]
-[New Thread 20424.0x2954]
+[New Thread 12292.0xf7c]
+[New Thread 12292.0x2ac8]
 
 Breakpoint 1, main () at problem02.c:7
 7         printf("Enter the value of a : \n");
-(gdb) s
+(gdb) n
 Enter the value of a :
 8         scanf("%d", &a);
-(gdb) s
-s
+(gdb) n
+4
 9         printf("Enter the value of b : \n");
-(gdb) s
+(gdb) n
 Enter the value of b :
 10        scanf("%d", &b);
-(gdb) s
+(gdb) n
+4
 11        sum = a + b;
-(gdb) s
+(gdb) n
 12        printf("The sum is : %d\n", sum);
-(gdb) s
-The sum is : 7607816
+(gdb) n
+The sum is : 8
 13        return 0;
-(gdb) s
-14      }(gdb) s
-0x00401288 in __register_frame_info ()
 (gdb) q
 A debugging session is active.
 
-        Inferior 1 [process 20424] will be killed.
+        Inferior 1 [process 12292] will be killed.
 
 Quit anyway? (y or n) y
 error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
