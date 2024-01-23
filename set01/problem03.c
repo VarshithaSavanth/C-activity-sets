@@ -33,5 +33,5 @@ int add(int a, int b)
 
 void output(int a, int b, int sum)
 {
-  printf("The sum is : %d", sum);
+  printf("The sum is : %d\n", sum);
 }
