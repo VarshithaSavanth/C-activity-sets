@@ -31,7 +31,7 @@ void compare(int a, int b, int c, int *largest)
   {
     *largest = a;
   }
-  if (b>=a && b>=c)
+  else if (b>=a && b>=c)
   {
     *largest = b;
   }
