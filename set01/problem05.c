@@ -31,18 +31,16 @@ int compare(int a, int b, int c)
     if(a>=b && a>=c)
     {
       largest = a;
-      return largest;
     }
-    if(b>=a && b>=c)
+    if(b>=c)
     {
       largest = b;
-      return largest;
     }
     else
     {
       largest = c;
-      return largest;
     }
+    return largest;
   }
 
 
