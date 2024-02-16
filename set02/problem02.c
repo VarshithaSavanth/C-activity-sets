@@ -45,6 +45,6 @@ void output(int a, int b, int c, int isscalene)
   }
   else if (isscalene==1)
   {
-    printf("The triangle with sides %d, %d and %d is not scalene", a ,b ,c);
+    printf("The triangle with sides %d, %d and %d is not scalene\n", a ,b ,c);
   }
 }
