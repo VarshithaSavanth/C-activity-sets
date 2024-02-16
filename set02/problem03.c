@@ -2,9 +2,8 @@
 // A Composite number has more than 2 factors.
 
 #include<stdio.h>
-#include<math.h>
 
-int input_number();
+int  input_number();
 int is_composite(int n);
 void output(int n, int result);
 
@@ -20,29 +19,30 @@ int input_number()
 {
   int n;
   printf("Enter the value of n : ");
-  scanf("%d, &n");
-  return 0;
+  scanf("%d",&n);
+  return n;
 }
 
 int is_composite(int n)
 {
-  if (n % 1 && n % )
+  for (int i=2 ; i<=n/2 ; i++)
+  if (n % i == 0)
   {
     return 0;
   }
-  else 
+  else
   {
-    return 1;
+  return 1;
   }
 }
 void output(int n, int result)
 {
   if (result==0)
   {
-    printf("%d is a composite number");
+    printf("%d is a composite number",n);
   }
-  if (result==1)
+  else
   {
-    printf("%d is not a composite number");
+    printf("%d is not a composite number",n);
   }
 }

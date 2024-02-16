@@ -43,7 +43,7 @@ void output(int a, int b, int c, int isscalene)
   {
     printf("The triangle with sides %d, %d and %d is scalene", a, b , c);
   }
-  else 
+  else if (isscalene==1)
   {
     printf("The triangle with sides %d, %d and %d is not scalene", a ,b ,c);
   }
