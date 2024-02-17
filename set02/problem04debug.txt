@@ -1,0 +1,85 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gcc problem04.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gdb a.exe    
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem04.c, line 11.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set02/a.exe
+[New Thread 1460.0xf38]
+[New Thread 1460.0x4f80]
+
+Breakpoint 1, 0x00401477 in main () at problem04.c:11
+11      {
+(gdb) n
+12        int n = input_array_size();
+(gdb) n
+Enter the size of array : 3
+13        int a[n];
+(gdb) n
+14        input_array(n, a);
+(gdb) n
+Enter the array values : 2
+Enter the array values : 4
+Enter the array values : 6
+15        int sum = sum_composite_numbers(n, a);
+(gdb) s
+sum_composite_numbers (n=3, a=0x61fee8)
+    at problem04.c:40
+40        int sum = 0, i = 0, j = 0;
+(gdb) print output
+$1 = {void (int)} 0x401627 <output>
+(gdb) s
+41        for (i = 0; i < n; i++)
+(gdb) s
+43          if (a[i] > 1)
+(gdb) s
+45            for (j = 2; j <= a[i]/2 ; j++)
+(gdb) s
+41        for (i = 0; i < n; i++)
+(gdb) s
+43          if (a[i] > 1)
+(gdb) s
+45            for (j = 2; j <= a[i]/2 ; j++)
+(gdb) n
+47              if (a[i] % j == 0)
+(gdb) n
+49                sum = sum + a[i];
+(gdb) n
+50                break;
+(gdb) n
+41        for (i = 0; i < n; i++)
+(gdb) n
+43          if (a[i] > 1)
+(gdb) n
+45            for (j = 2; j <= a[i]/2 ; j++)
+(gdb) n
+47              if (a[i] % j == 0)
+(gdb) n
+49                sum = sum + a[i];
+(gdb) n
+50                break;
+(gdb) n
+41        for (i = 0; i < n; i++)
+(gdb) n
+55        return sum;
+(gdb) n
+56      }
+(gdb) n
+main () at problem04.c:16
+16        output(sum);
+(gdb) n
+The sum is 10
+17        return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 1460) exited normally]
+(gdb) q
