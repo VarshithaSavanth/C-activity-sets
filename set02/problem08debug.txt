@@ -1,0 +1,52 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gcc problem08.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set02\a.exe...done.
+(gdb) b 25
+Breakpoint 1 at 0x401548: file problem08.c, line 25.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set02/a.exe
+[New Thread 22592.0x31e4]
+[New Thread 22592.0x268c]
+Enter the number of triangles : 3
+Triangle 1 --> Enter the base of the triangle : 6
+Enter the altitude of the triangle : 4
+Triangle 2 --> Enter the base of the triangle :
+8
+Enter the altitude of the triangle : 5
+Triangle 3 --> Enter the base of the triangle : 9
+Enter the altitude of the triangle : 4
+
+Breakpoint 1, main () at problem08.c:25
+25              output(n, t, smallest);
+(gdb) s
+output (n=3, t=0x61fe94, smallest=...) at problem08.c:86
+86          printf("The smallest triangle out of triangles with base and height is : \n");
+(gdb) s
+The smallest triangle out of triangles with base and height is :
+87          for (int i = 0; i < n; i++)
+(gdb) n
+89              printf("Triangle %d -->  Base : %.2f, Height : %.2f\n", i + 1, t[i].base, t[i].altitude);
+(gdb) n
+Triangle 1 -->  Base : 6.00, Height : 4.00
+87          for (int i = 0; i < n; i++)
+(gdb) print smallest.area
+$1 = 12
+(gdb) c
+Continuing.
+Triangle 2 -->  Base : 8.00, Height : 5.00
+Triangle 3 -->  Base : 9.00, Height : 4.00
+The smallest triangle has :
+Base : 6.00 ,
+Height 4.00,
+Area : 12.00
+[Inferior 1 (process 22592) exited normally]
+(gdb) q
