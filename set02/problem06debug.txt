@@ -1,0 +1,63 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>       
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".     
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set02\a.exe...done.
+(gdb) b 14
+Breakpoint 1 at 0x40147d: file problem06.c, line 14.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set02/a.exe
+[New Thread 11628.0x2770]
+[New Thread 11628.0x3f9c]
+Enter the string value : GOD
+
+Breakpoint 1, main () at problem06.c:14   
+14        str_reverse(str, reverse_str);  
+(gdb) s
+str_reverse (str=0x61febc "GOD",
+    rev_str=0x61fe58 ""_a")
+    at problem06.c:26
+26        int length = strlen(str);
+(gdb) s
+27        for (int i=length-1, j=0 ; i>=0 ; i--, j++)
+(gdb) s
+29          rev_str[j] = str[i];
+(gdb) s
+27        for (int i=length-1, j=0 ; i>=0 ; i--, j++)
+(gdb) s
+29          rev_str[j] = str[i];
+(gdb) s
+27        for (int i=length-1, j=0 ; i>=0 ; i--, j++)
+(gdb) s
+29          rev_str[j] = str[i];
+(gdb) s
+27        for (int i=length-1, j=0 ; i>=0 ; i--, j++)
+(gdb) s
+31        rev_str[length] = '\0';
+(gdb) s
+32      }
+(gdb) s
+main () at problem06.c:15
+15        output(str, reverse_str);
+(gdb) s
+output (a=0x61febc "GOD", 
+    reverse_a=0x61fe58 "DOG")
+    at problem06.c:36
+36        printf("String before reversed : %s\n", a);
+(gdb) print rev_str
+No symbol "rev_str" in current context.   
+(gdb) print reverse_a
+$1 = 0x61fe58 "DOG"
+(gdb) c
+Continuing.
+String before reversed : GOD
+Reversed String : DOG
+[Inferior 1 (process 11628) exited normally]
+(gdb) q
