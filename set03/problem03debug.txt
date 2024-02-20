@@ -1,0 +1,35 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem03.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe    
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b 13
+Breakpoint 1 at 0x401477: file problem03.c, line 13.      
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 21580.0x3178]
+[New Thread 21580.0x25b0]
+Enter the value of n : 
+5
+
+Breakpoint 1, main () at problem03.c:13
+13        int result = is_prime(n);
+(gdb) s
+is_prime (n=5) at problem03.c:28
+28        if (n <= 1)
+(gdb) n
+33        for (int i = 2; i <= sqrt(n); i++)
+(gdb) n
+35          if (n % i == 0)
+(gdb) c
+Continuing.
+5 is a prime number
+[Inferior 1 (process 21580) exited normally]
+(gdb) q
