@@ -88,6 +88,6 @@ void output(int n, Triangle t[n], Triangle smallest)
     {
         printf("Triangle %d -->  Base : %.2f, Height : %.2f\n", i + 1, t[i].base, t[i].altitude);
     }
-   printf("The smallest triangle has :\nBase : %.2f ,\nHeight %.2f, \nArea : %.2f\n", smallest.base, smallest.altitude, smallest.area);
+   printf("The smallest triangle has :\nBase   : %.2f\nHeight : %.2f \nArea   : %.2f\n", smallest.base, smallest.altitude, smallest.area);
 }
 
