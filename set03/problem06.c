@@ -18,9 +18,9 @@ int main()
 
 void input_string(char *a, char *b)
 {
-  printf("Enter the main string: ");
+  printf("Enter the string value : ");
   scanf("%s", a);
-  printf("Enter the substring: ");
+  printf("Enter the substring value : ");
   scanf("%s", b);
 }
 int sub_str_index(char *string, char *substring)

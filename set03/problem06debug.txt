@@ -1,0 +1,73 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b 15
+Breakpoint 1 at 0x4014a0: file problem06.c, line 15.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 24088.0x5cfc]
+[New Thread 24088.0x18c4]
+Enter the string value : RV_University
+Enter the substring value : Uni
+
+Breakpoint 1, main () at problem06.c:15
+15        output(string, sub_string, index);
+(gdb) s
+output (string=0x61feb8 "RV_University", substring=0x61fe54 "Uni", index=3)
+    at problem06.c:52
+52        printf("The index of '%s' in '%s' is  %d\n", substring, string, index);
+(gdb) c
+Continuing.
+The index of 'Uni' in 'RV_University' is  3
+[Inferior 1 (process 24088) exited normally]
+(gdb) q
+
+
+
+
+---------------------------------------------------------------------------
+
+
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401471: file problem06.c, line 13.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 1860.0x2ac]
+[New Thread 1860.0x5e30]
+
+Breakpoint 1, main () at problem06.c:13
+13        input_string(string, sub_string);
+(gdb) n
+Enter the string value : c,python,c++,java
+Enter the substring value : java
+14        int index = sub_str_index(string, sub_string);
+(gdb) n
+15        output(string, sub_string, index);
+(gdb) n
+The index of 'java' in 'c,python,c++,java' is  13
+16        return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 1860) exited normally]
+(gdb) q
