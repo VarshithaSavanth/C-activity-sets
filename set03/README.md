@@ -122,7 +122,7 @@ void output(char *string, char *substring, int index);
 
 ***Input***
 ```
-helloworldhello
+helloworldhello 
 world
 ```
 
