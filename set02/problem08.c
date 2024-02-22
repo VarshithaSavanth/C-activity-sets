@@ -16,7 +16,7 @@ void output(int n, Triangle t[n], Triangle smallest);
 
 int main()
 {
-	Triangle base, height;
+	Triangle base, altitude;
   int n = input_n();
 	Triangle t[n], smallest;
 	input_n_triangles(n, t);
