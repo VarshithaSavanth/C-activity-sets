@@ -12,7 +12,7 @@ void output(Triangle t);
 
 int main()
 {
-	Triangle base, height;
+	Triangle base, altitude;
 	Triangle t = input_triangle();
 	find_area(&t);
 	output(t);
