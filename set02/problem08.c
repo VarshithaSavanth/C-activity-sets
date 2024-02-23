@@ -49,7 +49,7 @@ void input_n_triangles(int n, Triangle t[n])
 	int i=0;
 	for(i=0 ; i<n ; i++)
 	{
-		printf("Triangle %d --> ", i+1);
+		printf("Triangle %d -->\n", i+1);
 		t[i] = input_triangle();
 	}
 }
