@@ -1,0 +1,38 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set05> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set05> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>       
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".     
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set05\a.exe...done.
+(gdb) b 15 
+Breakpoint 1 at 0x4014ef: file problem06.c, line 15.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set05/a.exe
+[New Thread 9820.0x5c68]
+[New Thread 9820.0x4c60]
+Enter the number of elements : 6
+Enter the array elements : 1
+Enter the array elements : 3
+Enter the array elements : 4
+Enter the array elements : 9
+Enter the array elements : 7
+Enter the array elements : 8
+
+Breakpoint 1, main () at problem06.c:15   
+15        output(avg);
+(gdb) s
+output (avg=5) at problem06.c:53
+53        printf("Average of all the odd elements is: %.2f\n", avg);
+(gdb) print avg
+$1 = 5
+(gdb) c
+Continuing.
+Average of all the odd elements is: 5.00  
+[Inferior 1 (process 9820) exited normally]
+(gdb) q
