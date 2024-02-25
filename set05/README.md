@@ -191,6 +191,7 @@ The camel Conky not have a nice name
 
 ---
 
+
 8.  Write program to find the weight of a truck load of n camels.
 
 Take inputs for:
