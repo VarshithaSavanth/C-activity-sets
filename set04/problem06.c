@@ -16,8 +16,23 @@ int main()
   return 0;
 }
 
-void input_string(char *a);
+void input_string(char *a)
+{
+  printf("Enter the string value : ");
+  scanf("%s", a);
+}
 
-int count_words(char *string);
+int count_words(char *string)
+{
+  int count=0, i=0;
+  for (i=0 ; string[i] != '\0' && string[i] != ' '; i++)
+  {
+    count;
+  }
+  return count;
+}
 
-void output(char *string, int no_words);
+void output(char *string, int no_words)
+{
+  printf("The number of words in '%s' is %d", string, no_words);
+}
