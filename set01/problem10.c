@@ -20,8 +20,8 @@ char input_strings(char *string1, char *string2)
   printf("Enter the second string : \n");
   scanf("%s", string2);
   return 0;
-
 }
+
 char compare_the_strings(char *string1, char *string2)
 {
   int i=0;

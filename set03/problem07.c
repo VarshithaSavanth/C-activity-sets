@@ -17,7 +17,7 @@ void output(Line l);
 
 int main()
 {
-
+  
 }
 
 Point input_point();

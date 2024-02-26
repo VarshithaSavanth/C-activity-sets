@@ -23,7 +23,7 @@ void output(Polygon p);
 
 int main()
 {
-
+  
 }
 
 int input_n();

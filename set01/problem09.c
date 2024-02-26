@@ -25,14 +25,22 @@ float input()
 
 float square_root(float n)
 {
-  float x_old = 1, x_new=n/2;
+  /*float x_old = 1, x_new=n/2;
   float precession = 0.000001;
   while(fabs(x_new - x_old) >  precession)
   {
     x_old = x_new;
     x_new =  (x_old + n / x_old) / 2;
   }
-  return x_new;
+  return x_new;*/
+  float sqrroot = 0;
+  int i;
+  for(i=1 ; i<n ; i++)
+  {
+    if(i * i == n);
+  }
+  sqrroot = i;
+  return sqrroot;
 }
 void output(float n, float sqrroot)
 {
