@@ -1,7 +1,7 @@
 // 6] Write a program to count the number of words in a string using strtok (_string.h_)
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 void input_string(char *a);
 int count_words(char *string);
@@ -12,7 +12,7 @@ int main()
   char string[100];
   input_string(string);
   int no_words = count_words(string);
-  output(string,no_words);
+  output(string, no_words);
   return 0;
 }
 
@@ -24,10 +24,21 @@ void input_string(char *a)
 
 int count_words(char *string)
 {
-  int count=0, i=0;
-  for (i=0 ; string[i] != '\0' && string[i] != ' '; i++)
+  int count = 0, no_words = 0;
+  for (int i = 0 ; string[i] != '\0' ; i++)
   {
-    count;
+    if (string[i] != ' ')
+    {
+      if (!no_words)
+      {
+        no_words = 1;
+        count++;
+      }
+    }
+    else
+    {
+      no_words = 0;
+    }
   }
   return count;
 }
