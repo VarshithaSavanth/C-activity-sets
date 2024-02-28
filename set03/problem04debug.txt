@@ -44,3 +44,6 @@ Continuing.
 fibo(4) = 3
 [Inferior 1 (process 19596) exited normally]
 (gdb) q
+
+
+
