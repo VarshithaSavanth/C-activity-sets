@@ -22,7 +22,7 @@ int main()
 int input_degree()
 {
   int n;
-  printf("Enter the degree value : ");
+  printf("Enter the highest degree of the ploynomial : ");
   scanf("%d", &n);
   return n;
 }
