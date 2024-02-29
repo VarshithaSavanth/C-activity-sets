@@ -1,0 +1,99 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set04> gcc problem04.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set04> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>    
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set04\a.exe...done.      
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem04.c, line 12.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set04/a.exe
+[New Thread 964.0x27e8]
+[New Thread 964.0x39fc]
+
+Breakpoint 1, 0x00401477 in main () at problem04.c:12
+12      {
+(gdb) n
+13        int n = input_degree();
+(gdb) n
+Enter the degree value : 2
+14        float a[n];
+(gdb) n
+15        input_coefficients(n, a);
+(gdb)
+Enter the coefficients : 4
+Enter the coefficients : 4
+Enter the coefficients : 4
+16        float x = input_x();
+(gdb) n
+Enter the x value : 2
+17        float result = evaluate_polynomial(n, a, x);
+(gdb) n
+18        output(n, a, x, result);
+(gdb) n
+H(2, 2.00, 2) = 4.00 + 4.00 * 2.00 to the power of 1 + 4.00 * 2.00 to the power of 2 = 28.000000
+19        return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 964) exited normally]
+(gdb) q
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+PS C:\Users\varsh\PSC\C-activity-sets\set04> gcc problem04.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set04> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>    
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"       
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set04\a.exe...done.      
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem04.c, line 12.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set04/a.exe
+[New Thread 1196.0x4e50]
+[New Thread 1196.0x2318]
+
+Breakpoint 1, 0x00401477 in main () at problem04.c:12
+12      {
+(gdb) n
+13        int n = input_degree();
+(gdb) n
+Enter the degree value : 2
+14        float a[n];
+(gdb) n
+15        input_coefficients(n, a);
+(gdb) n
+Enter the coefficients : 2
+Enter the coefficients : 2
+Enter the coefficients : 2
+16        float x = input_x();
+(gdb) n
+Enter the x value : 2
+17        float result = evaluate_polynomial(n, a, x);
+(gdb) n
+18        output(n, a, x, result);
+(gdb) n
+H(2, 2.00, 2) = 2.00 + 2.00 * 2.00 to the power of 1 + 2.00 * 2.00 to the power of 2 = 14.000000
+19        return 0;
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 1196] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
