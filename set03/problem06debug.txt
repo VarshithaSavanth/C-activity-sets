@@ -10,6 +10,137 @@ This GDB was configured as "mingw32".
 For bug reporting instructions, please see:
 <http://www.gnu.org/software/gdb/bugs/>...
 Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b 14
+Breakpoint 1 at 0x401485: file problem06.c, line 14.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 15564.0x6564]
+[New Thread 15564.0x3d9c]
+Enter the string value : rvunibangalore
+Enter the substring value : uni
+
+Breakpoint 1, main () at problem06.c:14
+14        int index = sub_str_index(string, sub_string);
+(gdb) s
+sub_str_index (string=0x61feb8 "rvunibangalore", substring=0x61fe54 "uni") at problem06.c:30
+30        for (i = 0; string[i] != '\0'; i++)
+(gdb) s
+32          int index = 1;
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+35            if (string[i + j] != substring[j])
+(gdb) s
+37              index = 0;
+(gdb) s
+38              break;
+(gdb) s
+41          if (index)
+(gdb) s
+30        for (i = 0; string[i] != '\0'; i++)
+(gdb) s
+32          int index = 1;
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+35            if (string[i + j] != substring[j])
+(gdb) s
+37              index = 0;
+(gdb) s
+38              break;
+(gdb) s
+41          if (index)
+(gdb) s
+30        for (i = 0; string[i] != '\0'; i++)
+(gdb) s
+32          int index = 1;
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+35            if (string[i + j] != substring[j])
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+35            if (string[i + j] != substring[j])
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+35            if (string[i + j] != substring[j])
+(gdb) s
+33          for (j = 0; substring[j] != '\0'; j++)
+(gdb) s
+41          if (index)
+(gdb) s
+43            return i;
+(gdb) s
+47      }
+(gdb) s
+main () at problem06.c:15
+15        output(string, sub_string, index);
+(gdb) s
+output (string=0x61feb8 "rvunibangalore", substring=0x61fe54 "uni", index=2) at problem06.c:51
+51        if (index == 1)
+(gdb) s
+57          printf("The index of '%s' in '%s' is %d\n", substring, string, index);
+(gdb) print index
+$1 = 2
+(gdb) c
+Continuing.
+The index of 'uni' in 'rvunibangalore' is 2
+[Inferior 1 (process 15564) exited normally]
+(gdb) q
+
+----------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b 14
+Breakpoint 1 at 0x401485: file problem06.c, line 14.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 26036.0x65f8]
+[New Thread 26036.0x5b98]
+Enter the string value : helloworldhieervunibangalorebsccomputerscience
+Enter the substring value : computer
+
+Breakpoint 1, main () at problem06.c:14
+14        int index = sub_str_index(string, sub_string);
+(gdb) n
+15        output(string, sub_string, index);
+(gdb) n
+The index of 'computer' in 'helloworldhieervunibangalorebsccomputerscience' is 31
+16        return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 26036) exited normally]
+(gdb) q
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem06.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
 (gdb) b 15
 Breakpoint 1 at 0x4014a0: file problem06.c, line 15.
 (gdb) r
