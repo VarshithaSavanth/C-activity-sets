@@ -1,0 +1,57 @@
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gcc problem05.c -O0 -g
+PS C:\Users\varsh\PSC\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\varsh\PSC\C-activity-sets\set03\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem05.c, line 11.
+(gdb) r
+Starting program: C:\Users\varsh\PSC\C-activity-sets\set03/a.exe
+[New Thread 27156.0x6c1c]
+[New Thread 27156.0x2138]
+
+Breakpoint 1, 0x00401477 in main () at problem05.c:11
+11      {
+(gdb) step
+12        int n = input_array_size();
+(gdb) n   
+Enter the size of array : 10
+13        int a[n];
+(gdb) n
+14        init_array(n, a);
+(gdb) n
+15        erotosthenes_sieve(n, a);
+(gdb) n
+2
+6
+10
+3
+9
+4
+5
+6
+7
+8
+9
+10
+Prime numbers : 2, 3, 5, 7, 9
+Program received signal SIGSEGV, Segmentation fault.
+0x00401508 in main () at problem05.c:18
+18      }
+(gdb) c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00401508 in main () at problem05.c:18
+18      }
+(gdb) c
+Continuing.
+[Inferior 1 (process 27156) exited with code 030000000005]
+(gdb) q
