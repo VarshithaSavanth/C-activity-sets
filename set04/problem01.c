@@ -35,8 +35,8 @@ void add(int num1, int den1, int num2, int den2, int *res_num, int *res_den)
   {
     if(*res_num % i == 0 && *res_den % i == 0)
     {
-      *res_num /= i;
-      *res_den /= i;
+      *res_num = *res_num/i;
+      *res_den = *res_den/i;
       break;
     }
   }
