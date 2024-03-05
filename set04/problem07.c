@@ -20,7 +20,7 @@ int main()
     f2 = input_fraction();
     find_gcd(a, b);
     sum = add_fractions(f1, f2);
-    output(f1, f2, f3, sum);
+    output(f1, f2, sum);
     return 0;
 }
 
