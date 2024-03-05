@@ -17,5 +17,11 @@ void output(int n, Fraction f[n], Fraction sum);
 
 int main()
 {
-  
+  int n, a, b;
+  Fraction f1, f2, sum;
+  n = input_n();
+  Fraction f[n];
+  input_n_fractions(n,f);
+  find_gcd(a, b);
+  add_fractions(f1,f2)
 }

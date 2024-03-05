@@ -10,7 +10,7 @@ typedef struct
 Fraction input_fraction();
 int find_gcd(int a, int b);
 Fraction add_fractions(Fraction f1, Fraction f2);
-void output(Fraction f1, Fraction f2, Fraction f3, Fraction sum);
+void output(Fraction f1, Fraction f2, Fraction sum);
 
 int main()
 {
@@ -31,10 +31,6 @@ Fraction input_fraction()
     scanf("%d", &f.num);
     printf("Enter the denominator value of the fraction : ");
     scanf("%d", &f.den);
-    // printf("Enter the numerator value of the 2nd fraction : ");
-    // scanf("%d", &f.num);
-    // printf("Enter the denominator value of the 2nd fraction : ");
-    // scanf("%d", &f.den);
     return f;
 }
 
@@ -63,7 +59,7 @@ Fraction add_fractions(Fraction f1, Fraction f2)
     return sum;
 }
 
-void output(Fraction f1, Fraction f2, Fraction f3, Fraction sum)
+void output(Fraction f1, Fraction f2, Fraction sum)
 {
     printf("%d/%d + %d/%d = %d/%d", f1.num, f1.den, f2.num, f2.den, sum.num, sum.den);
 }
